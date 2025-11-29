@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('class_id');
+            $table->unsignedBigInteger('teacher_id');
+            $table->unsignedBigInteger('subject_id');
+            $table->enum('day_of_weak', ['Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7']);
+            $table->integer('period');
+            $table->foreign('class_id')->references('id')->on('classes');
+            $table->foreign('teacher_id')->references('id')->on('teachers');
+            $table->foreign('subject_id')->references('id')->on('subjects');
             $table->timestamps();
         });
     }

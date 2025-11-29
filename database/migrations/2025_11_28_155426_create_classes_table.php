@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('classes', function (Blueprint $table) {
             $table->id();
+            $table->string('class_name');
+            $table->integer('grade');
+            $table->unsignedBigInteger('homeroom_teacher_id');
+            $table->foreign('homeroom_teacher_id')->references('id')->on('teachers');
             $table->timestamps();
         });
     }

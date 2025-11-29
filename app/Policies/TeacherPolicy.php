@@ -2,9 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\admin\teacher;
 use App\Models\User;
-use App\Models\teacher;
-use Illuminate\Auth\Access\Response;
 
 class TeacherPolicy
 {

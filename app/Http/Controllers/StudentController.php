@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\student;
 use App\Http\Requests\StorestudentRequest;
 use App\Http\Requests\UpdatestudentRequest;
+use App\Models\admin\student;
 
 class StudentController extends Controller
 {

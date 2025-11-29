@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoresubjectRequest;
-use App\Http\Requests\UpdatesubjectRequest;
-use App\Models\admin\subject;
+use Illuminate\Http\Request;
 
-class SubjectController extends Controller
+class dashboard extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('dashboard.dashboard');
     }
 
     /**
@@ -27,7 +25,7 @@ class SubjectController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoresubjectRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +33,7 @@ class SubjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(subject $subject)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +41,7 @@ class SubjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(subject $subject)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +49,7 @@ class SubjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatesubjectRequest $request, subject $subject)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +57,7 @@ class SubjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(subject $subject)
+    public function destroy(string $id)
     {
         //
     }

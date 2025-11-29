@@ -2,9 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\admin\schedule;
 use App\Models\User;
-use App\Models\schedule;
-use Illuminate\Auth\Access\Response;
 
 class SchedulePolicy
 {

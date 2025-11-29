@@ -2,9 +2,8 @@
 
 namespace App\Policies;
 
+use App\Models\admin\subject;
 use App\Models\User;
-use App\Models\subject;
-use Illuminate\Auth\Access\Response;
 
 class SubjectPolicy
 {

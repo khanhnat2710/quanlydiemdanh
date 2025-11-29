@@ -5,14 +5,13 @@
 @section('content')
     <div class="space-y-6">
         <!-- Stats Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Card 1 -->
             <div class="bg-white rounded-2xl p-6 card-shadow">
                 <div class="flex items-start justify-between">
                     <div class="space-y-2">
                         <p class="text-sm text-gray-500">Tổng số học sinh</p>
                         <h3 class="text-3xl font-semibold">1,234</h3>
-                        <span class="text-sm text-green-600">+12% từ tháng trước</span>
                     </div>
                     <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center">
                         <i data-lucide="users" class="w-6 h-6 text-white"></i>
@@ -26,7 +25,6 @@
                     <div class="space-y-2">
                         <p class="text-sm text-gray-500">Tổng số giáo viên</p>
                         <h3 class="text-3xl font-semibold">87</h3>
-                        <span class="text-sm text-green-600">+5% từ tháng trước</span>
                     </div>
                     <div class="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
                         <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
@@ -40,7 +38,6 @@
                     <div class="space-y-2">
                         <p class="text-sm text-gray-500">Tổng số lớp học</p>
                         <h3 class="text-3xl font-semibold">42</h3>
-                        <span class="text-sm text-green-600">+3% từ tháng trước</span>
                     </div>
                     <div class="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
                         <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
@@ -49,18 +46,18 @@
             </div>
 
             <!-- Card 4 -->
-            <div class="bg-white rounded-2xl p-6 card-shadow">
-                <div class="flex items-start justify-between">
-                    <div class="space-y-2">
-                        <p class="text-sm text-gray-500">Tỷ lệ điểm danh TB</p>
-                        <h3 class="text-3xl font-semibold">94.2%</h3>
-                        <span class="text-sm text-green-600">+2.1% từ tháng trước</span>
-                    </div>
-                    <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                        <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
-                    </div>
-                </div>
-            </div>
+{{--            <div class="bg-white rounded-2xl p-6 card-shadow">--}}
+{{--                <div class="flex items-start justify-between">--}}
+{{--                    <div class="space-y-2">--}}
+{{--                        <p class="text-sm text-gray-500">Tỷ lệ điểm danh TB</p>--}}
+{{--                        <h3 class="text-3xl font-semibold">94.2%</h3>--}}
+{{--                        <span class="text-sm text-green-600">+2.1% từ tháng trước</span>--}}
+{{--                    </div>--}}
+{{--                    <div class="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">--}}
+{{--                        <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
 
 {{--        <!-- Charts -->--}}
@@ -127,7 +124,11 @@
                         <tr class="border-b">
                             <td class="py-3 px-4">Lớp 12C1</td>
                             <td class="py-3 px-4">Lê Văn C</td>
-
+                            <td class="py-3 px-4">
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                    91.4%
+                                </span>
+                            </td>
                             <td class="py-3 px-4">38 học sinh</td>
 
                         </tr>
@@ -140,11 +141,6 @@
                                 </span>
                             </td>
                             <td class="py-3 px-4">34 học sinh</td>
-                            <td class="py-3 px-4">
-                                <button class="px-4 py-2 text-sm border border-gray-300 rounded-xl hover:bg-gray-50">
-                                    Xem chi tiết
-                                </button>
-                            </td>
                         </tr>
                         </tbody>
                     </table>

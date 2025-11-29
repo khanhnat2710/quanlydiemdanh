@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->enum('gender', ['Nam', 'Nữ']);
+            $table->date('birthday');
+            $table->unsignedBigInteger('class_id');
+            $table->enum('status', ['Đang học', 'Nghỉ học']);
+            $table->foreign('class_id')->references('id')->on('classes');
             $table->timestamps();
         });
     }

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\teacher;
 use App\Http\Requests\StoreteacherRequest;
 use App\Http\Requests\UpdateteacherRequest;
+use App\Models\admin\teacher;
 
 class TeacherController extends Controller
 {
@@ -13,7 +13,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        return view('teacher.teacher');
     }
 
     /**

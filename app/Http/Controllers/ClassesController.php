@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\classes;
 use App\Http\Requests\StoreclassesRequest;
 use App\Http\Requests\UpdateclassesRequest;
+use App\Models\admin\classes;
 
 class ClassesController extends Controller
 {
@@ -13,7 +13,7 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        //
+        return view('classes.classes');
     }
 
     /**
@@ -21,7 +21,7 @@ class ClassesController extends Controller
      */
     public function create()
     {
-        //
+        return view('classes.create');
     }
 
     /**
