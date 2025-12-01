@@ -18,7 +18,7 @@
     </div>
 
     <!-- Form -->
-    <form method="POST" action="{{ route('login') }}">
+    <form method="POST" action="">
         @csrf
 
         <!-- Email -->
