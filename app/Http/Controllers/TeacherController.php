@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreteacherRequest;
 use App\Http\Requests\UpdateteacherRequest;
 use App\Models\admin\teacher;
+use Illuminate\Support\Facades\Request;
 
 class TeacherController extends Controller
 {
@@ -13,15 +14,16 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('teacher.teacher');
+        $data = teacher::all();
+        return view('teacher.index', ['data' => $data]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        return view('teacher.create');
     }
 
     /**

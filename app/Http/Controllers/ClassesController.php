@@ -13,7 +13,8 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        return view('classes.classes');
+        $data = classes::all();
+        return view('classes.index', ['data' => $data]);
     }
 
     /**
@@ -29,7 +30,19 @@ class ClassesController extends Controller
      */
     public function store(StoreclassesRequest $request)
     {
-        //
+        $class_name = $request->class_name;
+        $grade = $request->grade;
+        $number_of_students = $request->number_of_students;
+        $homeroom_teacher_id = $request->homeroom_teacher_id;
+
+        $classes = classes::create([
+            'class_name' => $class_name,
+            'grade' => $grade,
+            'number_of_students' => $number_of_students,
+            'homeroom_teacher_id' => $homeroom_teacher_id,
+        ]);
+
+        return redirect()->route('classes.index');
     }
 
     /**

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('class_name');
             $table->integer('grade');
+            $table->integer('number_of_students');
             $table->unsignedBigInteger('homeroom_teacher_id');
             $table->foreign('homeroom_teacher_id')->references('id')->on('teachers');
             $table->timestamps();

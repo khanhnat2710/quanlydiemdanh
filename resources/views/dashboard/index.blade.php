@@ -1,4 +1,4 @@
-{{-- resources/views/admin/dashboard.blade.php --}}
+{{-- resources/views/admin/index.blade.php --}}
 @extends('layout.app')
 
 @section('title', 'Dashboard - Tổng quan')

@@ -12,6 +12,7 @@ class classes extends Model
     protected $fillable = [
         'class_name',
         'grade',
+        'number_of_students',
         'homeroom_teacher_id',
     ];
 
