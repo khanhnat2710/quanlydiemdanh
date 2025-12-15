@@ -16,7 +16,7 @@ class classes extends Model
         'homeroom_teacher_id',
     ];
 
-    protected function teacher(){
-        return $this->belongsTo(teacher::class);
+    public function homeroomTeacher(){
+        return $this->belongsTo(teacher::class, 'homeroom_teacher_id');
     }
 }

@@ -1,6 +1,13 @@
 @extends('layout.app')
 @section('content')
     <div>
+        <a href="{{ route('teacher.create') }}">
+            <button>
+                thêm giáo viên
+            </button>
+        </a>
+    </div>
+    <div>
         <table class="min-w-full border border-gray-200 text-sm text-left">
             <thead>
                 <tr>
@@ -11,14 +18,16 @@
                 </tr>
             </thead>
 
+            @foreach($teacher as $teacher)
             <tbody>
                 <tr>
-                    <td class="text-center">1</td>
-                    <td class="text-center">Nguyễn Văn A</td>
-                    <td class="text-center">nguyenvana@gmail.com</td>
-                    <td class="text-center">0123456789</td>
+                    <td class="text-center">{{ $teacher->id }}</td>
+                    <td class="text-center">{{ $teacher->full_name }}</td>
+                    <td class="text-center">{{ $teacher->email }}</td>
+                    <td class="text-center">{{ $teacher->phone_number }}</td>
                 </tr>
             </tbody>
+            @endforeach
         </table>
     </div>
 @endsection

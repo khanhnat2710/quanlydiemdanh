@@ -24,14 +24,14 @@
                     <th></th>
                 </tr>
             </thead>
-            @foreach($data as $class)
+            @foreach($classes as $class)
             <tbody>
                 <tr>
                     <td class="text-center">{{ $class->id }}</td>
                     <td class="text-center">{{ $class->class_name }}</td>
                     <td class="text-center">{{ $class->grade }}</td>
                     <td class="text-center">{{ $class->number_of_students }}</td>
-                    <td class="text-center">{{ $class->homeroom_teacher_id }}</td>
+                    <td class="text-center">{{ $class->homeroomTeacher->full_name ?? 'Chưa phân công' }}</td>
                     <td class="text-center">Sửa</td>
                     <td class="text-center">Xóa</td>
                 </tr>

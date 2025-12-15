@@ -21,7 +21,6 @@ Route::get('/classes', [ClassesController::class, 'index']
 Route::get('/teacher', [TeacherController::class, 'index']
 )->name('teacher.index');
 
-Route::put('teacher/create', [TeacherController::class, 'create']
-)->name('teacher.create');
-
 Route::resource('classes', ClassesController::class);
+
+Route::resource('teacher', TeacherController::class);

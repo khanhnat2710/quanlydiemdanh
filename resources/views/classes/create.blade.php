@@ -25,7 +25,12 @@
 
         <div>
             <label for="homeroom_teacher_id">Giáo viên chủ nhiệm: </label>
-            <input type="text" name="homeroom_teacher_id" id="homeroom_teacher_id" placeholder="Nhập tên giáo viên">
+            <select name="homeroom_teacher_id" id="homeroom_teacher_id">
+                <option value="" disabled selected>Chọn giáo viên</option>
+                @foreach($teachers as $teacher)
+                    <option value="{{ $teacher->id }}" @selected(old('homeroom_teacher_id') == $teacher->id)>{{ $teacher->full_name }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div>

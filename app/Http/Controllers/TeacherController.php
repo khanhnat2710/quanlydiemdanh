@@ -14,8 +14,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $data = teacher::all();
-        return view('teacher.index', ['data' => $data]);
+        $teacher = teacher::all();
+        return view('teacher.index', ['teacher' => $teacher]);
     }
 
     /**
@@ -31,7 +31,18 @@ class TeacherController extends Controller
      */
     public function store(StoreteacherRequest $request)
     {
-        //
+        $full_name = $request->full_name;
+        $email = $request->email;
+        $phone_number = $request->phone_number;
+
+        $teacher = Teacher::create([
+           'full_name' => $full_name,
+           'email' => $email,
+           'phone_number' => $phone_number,
+        ]);
+
+//        dd($request->all());
+        return redirect()->route('teacher.index');
     }
 
     /**

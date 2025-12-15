@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreclassesRequest;
 use App\Http\Requests\UpdateclassesRequest;
 use App\Models\admin\classes;
+use App\Models\admin\teacher;
 
 class ClassesController extends Controller
 {
@@ -13,8 +14,8 @@ class ClassesController extends Controller
      */
     public function index()
     {
-        $data = classes::all();
-        return view('classes.index', ['data' => $data]);
+        $classes = classes::all();
+        return view('classes.index', ['classes' => $classes]);
     }
 
     /**
@@ -22,7 +23,8 @@ class ClassesController extends Controller
      */
     public function create()
     {
-        return view('classes.create');
+        $teachers = teacher::select('id', 'full_name')->get();
+        return view('classes.create', compact('teachers'));
     }
 
     /**
@@ -42,6 +44,7 @@ class ClassesController extends Controller
             'homeroom_teacher_id' => $homeroom_teacher_id,
         ]);
 
+//        dd($request->homeroom_teacher_id);
         return redirect()->route('classes.index');
     }
 
